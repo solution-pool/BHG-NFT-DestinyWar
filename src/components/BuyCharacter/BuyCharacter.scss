@@ -221,7 +221,7 @@
         &__left,
         &__right {
           .value {
-            font-size: 5.4vw;
+            font-size: 3.4vw;
           }
         }
 
@@ -255,18 +255,18 @@
   }
 }
 
-@media (max-width: 768px) {
-	.buyCharacter {
-		&__top {
-			flex-direction: column;
-		}
+// @media (max-width: 768px) {
+// 	.buyCharacter {
+// 		&__top {
+// 			flex-direction: column;
+// 		}
 
-		&__special {
-			flex-direction: column;
+// 		&__special {
+// 			flex-direction: column;
 
-			&__item {
-				margin-bottom: 10vw;
-			}
-		}
-	}
-}
+// 			&__item {
+// 				margin-bottom: 10vw;
+// 			}
+// 		}
+// 	}
+// }
