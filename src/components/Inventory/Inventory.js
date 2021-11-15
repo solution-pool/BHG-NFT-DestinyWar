@@ -1,7 +1,5 @@
 import "./Inventory.scss";
-import dwar from "../../assets/img/inventory/11.png";
-import mount from "../../assets/img/inventory/22.png";
-import pet from "../../assets/img/inventory/33.png";
+import egg from "../../assets/img/buy/egg.png";
 import { useState, useEffect } from "react";
 import { getItemProperty, getNumber } from "../../helpers/contract";
 
@@ -49,7 +47,7 @@ export const Inventory = ({ walletAddress }) => {
       <div className="inventory__title">My Inventory</div>
 
       <div className="inventory__items">
-        {characterId && (
+        {characterId > 0 ? (
           <div className="inventory__items__dwar">
             <div className="inventory__items__title">1 DWAR</div>
             <div className="inventory__items__pic">
@@ -57,8 +55,16 @@ export const Inventory = ({ walletAddress }) => {
               <img alt="pic" src={characterUri}></img>
             </div>
           </div>
+        ) : (
+          <div className="inventory__items__dwar">
+          <div className="inventory__items__title"></div>
+          <div className="inventory__items__pic">
+            <span></span>
+            <img alt="pic" src={egg}></img>
+          </div>
+        </div>
         )}
-        {mountId && (
+        {mountId > 0 ? (
           <div className="inventory__items__mount">
             <div className="inventory__items__title">1 MOUNT</div>
             <div className="inventory__items__pic">
@@ -66,9 +72,17 @@ export const Inventory = ({ walletAddress }) => {
               <img alt="pic" src={mountUri}></img>
             </div>
           </div>
+        ) : (
+          <div className="inventory__items__mount">
+          <div className="inventory__items__title"></div>
+          <div className="inventory__items__pic">
+            <span></span>
+            <img alt="pic" src={egg}></img>
+          </div>
+        </div>
         )}
 
-        {petId && (
+        {petId > 0 ?  (
           <div className="inventory__items__pet">
             <div className="inventory__items__title">1 PET</div>
             <div className="inventory__items__pic">
@@ -76,6 +90,14 @@ export const Inventory = ({ walletAddress }) => {
               <img alt="pic" src={petUri}></img>
             </div>
           </div>
+        ) : (
+          <div className="inventory__items__pet">
+          <div className="inventory__items__title"></div>
+          <div className="inventory__items__pic">
+            <span></span>
+            <img alt="pic" src={egg}></img>
+          </div>
+        </div>
         )}
       </div>
     </section>
