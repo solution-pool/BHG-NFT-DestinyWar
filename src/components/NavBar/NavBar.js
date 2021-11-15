@@ -41,7 +41,7 @@ export const NavBar = () => {
             <div className="navBar__iconWrapper">
                 {
                     info.map((item, index) => (
-                        <a className="navBar__iconWrapper__item" key={index} href={item.url}>
+                        <a className="navBar__iconWrapper__item" key={index} href={item.url} target="_blank">
                             <div className="navBar__iconWrapper__item__icon">
                                 <img src={item.icon} alt="pic"></img>
                             </div>
