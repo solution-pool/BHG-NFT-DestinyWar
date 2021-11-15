@@ -28,51 +28,51 @@ const info = [
         team_logo: teamLogos[0],
         team_img: teams[0],
         title: 'FIGHTER',
-        desc: `For hundreds of years, the gypsies have been circulated in the East, with Penglai Island, in the West with Kun Lun on the top of the mountain in the Western Great Wall, all of which are places of harmony between heaven and earth, a fairy scene in the human world. Since the time when Khuong Tu Nha supported Chau to destroy Tru, Mount Kunlun had attracted many high-ranking Taoists to practice. Whether it's for the sake of immortality, the art of chanting and exchanging dances, or the magic of calling God Dragon, those who practice immortal arts must have superior qualities as well as a firm mind if they want to achieve true results.<br/><br/>Gravity : Spirit, Man Tiep.`
+        desc: `In the distant past a warrior named Kuang Tu Nha helped the Chou dynasty defeat Tru, a dangerous warrior that had threatened everything.  The legend of this battle has drawn hundreds of the greatest Taoists to study his hand to hand style, hoping to become as great as the legendary warrior. </br>Fighters are warriors who focus on close combat. They use their fists to make rapid attacks to wear down their enemies.`
     },
     {
         team_logo: teamLogos[1],
         team_img: teams[1],
-        title: 'GLADIATOR',
-        desc: `Thousands of years ago, Gladiator mountain was the land of demons, everything beyond a hundred miles was desolated by evil spirits. In order to prevent disaster for the world, the two patriarchs of Gladiator, the true Tai Chi and Nhat Tam, did not mind the hardships to find this place. After defeating the great demon Long Cot Tinh, the two Taoists established a sect to receive disciples and teach all the great teachings.`
+        title: 'SWORDSMAN',
+        desc: `Swordsman have travelled the world for centuries, gathering in places of power to study and hone their abilities.  A true swordsman spends decades honing their craft until their sword is almost a third limb.  They are some of the most deadly and feared warriors in the world. </br>Swordsman focus on close combat using blades. They can deal massive damage with their blades.  They keep their enemies from attacking the weaker members of their party. `
     },
     {
         team_logo: teamLogos[2],
         team_img: teams[2],
         title: 'MAGE',
-        desc: `With the magic of calling demons and sending gods, through all 3 realms of Heaven - Earth - Human, Mao Son scared people and mistook them for evil spirits. In the 5th generation, Mao Chan Nhan wanted to change the prejudices of the world, so he devoted all his efforts to promoting greatness, making Mage today famous, attracting many heroic teenagers. afraid to go deep with a cup to worship
-        <br/><br/>
-        Gravity: Mental, Physical.
+        desc: `Mages have focused their power into the summoning of demons and manipulation of the three realms; Heaven, Earth and Human.  Their powers made the people considered evil spirits and they withdrew from the world for a time. Recently they finally  revealed themselves again.  </br>They focused on helping others and soon people began to see them as allies rather than enemies. A mage keeps his foes at a distance, using staves to launch magical attacks at their enemies.  While weak physically their powers can cause massive damage.
         `
     },
     {
         team_logo: teamLogos[3],
         team_img: teams[3],
         title: 'NINJA',
-        desc: `Ninja is a mysterious organization that has been rumored in the Gypsies for a long time, famous for its poison and hidden weapons that have buried many famous heroes and knights. It wasn't until the 24th generation that Ninja revealed his whereabouts due to the fact that Tang Hu killed the family to seize the throne. Tang Mon's poisonous weapon is a non-poisonous secret weapon that can easily kill people over a hundred yards away. During the flourishing period of the Zhou Dynasty, the Tang family silently supported and solved many difficulties for the Son of Heaven.`
+        desc: `Ninjas are a mysterious organization that has existed hidden in the shadows for centuries. Long ago they served under the Zhou dynasty, striking down their foes. They are feared by the people who know of them, as one can never know when or where they may strike.  Their hidden blades and clever poisons have killed hundreds of heroes and knights.
+        </br>Ninjas focus on close combat against their foes.  They are far more flexible than other warriors, using a variety of different weapons to cause a variety of effects.`
     },
     {
         team_logo: teamLogos[4],
         team_img: teams[4],
         title: 'PRIEST',
-        desc: `Away from the chaos of the Warring States period, Ghost Coc Tu hid in Van Mong lagoon. Studying in meditation for 50 years, he has collected a lot of academic pharmacology, and also composed a series of enchanting magic arrays with extraordinary power. After Ton Tan, Bang Quyen, Ghost Coc Tu also accepted To Tan; These three great disciples have a better temperament than humans. Soon, Priest's reputation became known to the world, attracting thousands of people to worship the scholar.
-        <br/><br/>
-        Gravity: Mental, Physical
+        desc: `During the warring states period the priests went deep into the Mon Vong swamp away from the fighting to focus on peace rather than war.  For 50 years he meditated and studied the local plants and herbs.  As time passed he unlocked the secrets of hundreds of potions, becoming an expert in pharmacology.  They also learned many magical spells of great power.
+        </br>
+        The priest is a great healer, his powers keeping people alive in the most dangerous situations.  When forced to fight the priest uses his staff to send magical attacks at his foes from a great distance.
         `
     },
     {
         team_logo: teamLogos[5],
         team_img: teams[5],
-        title: 'SWORDSMAN',
-        desc: `For hundreds of years, the gypsies have been circulated in the East, with Penglai Island, in the West with Kun Lun on the top of the mountain in the Western Great Wall, all of which are places of harmony between heaven and earth, a fairy scene in the human world. Since the time when Khuong Tu Nha supported Chau to destroy Tru, Mount Kunlun had attracted many high-ranking Taoists to practice. Whether it's for the sake of immortality, the art of chanting and exchanging dances, or the magic of calling God Dragon, those who practice immortal arts must have superior qualities as well as a firm mind if they want to achieve true results.`
+        title: 'TAOIST',
+        desc: `There are many places of power across the world but the Taoists have gathered at the peak of Kun Lun.  Here they can focus on the heavens, contacting demons and other celestial creatures, making deals with them to call on their abilities in the future.  When not communing with the universe they study their skill with the blade.
+        </br>Taoists are ranged warriors who use a staff to summon allies to fight for them.  When not calling on allies they use a sword to attack their foes.`
     },
     {
         team_logo: teamLogos[6],
         team_img: teams[6],
-        title: 'WARRIOR',
-        desc: `Legend has it that the martial arts of Warrior were handed down by the great general of the founding of the Zhou Dynasty, Duong Tien, including Ba Vuong Thuong Phap and Phong Ma Bong Phap. The spear method is unequaled, majestic like a beast, and Bong Phap is proud of ten thousand zhang, able to paint islands and seas. Just mastering the two types of martial arts above, you can be the best enemy of ten thousand people, and shake the martial arts.
-        <br/><br/>
-        In addition, the Military Guards are also trained in a serious military environment, so when they leave the camp, everyone has a strong physique and an iron will to fight.
+        title: 'KNIGHT',
+        desc: `Knight who follow the teaching of an unknown warrior in the past.  His teachings are considered some of the most difficult and beautiful of all the warriors in the world.  Warrior are part of a strong military tradition and they expect their warriors to train constantly to maintain peak physical health.
+        </br>
+        Knight are close quarter sword/Spear wielders focused on attacking many enemies.
         `
     }
 ]

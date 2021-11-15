@@ -9,23 +9,28 @@ import icon5 from '../../assets/icon/youtube.png';
 const info = [
     {
         icon: icon1,
-        title: 'Facebook'
+        title: 'Facebook',
+        url : 'https://www.facebook.com/gaming/DestinyWarNFTGame'
     }, 
     {
         icon: icon2,
-        title: 'Discord'
+        title: 'Discord',
+        url: 'https://discord.gg/v3SbRprrnP'
     },
     {
         icon: icon3,
-        title: 'Instagram'
+        title: 'Instagram',
+        url: '#javascript'
     },
     {
         icon: icon4,
-        title: 'Twitter'
+        title: 'Telegram',
+        url:'https://t.me/destinywarnftgame'
     }, 
     {
         icon: icon5,
-        title: 'Youtube'
+        title: 'Youtube',
+        url: '#javascript'
     }
 ]
 
@@ -35,7 +40,7 @@ export const NavBar = () => {
             <div className="navBar__iconWrapper">
                 {
                     info.map((item, index) => (
-                        <a className="navBar__iconWrapper__item" key={index} href="#javascript;">
+                        <a className="navBar__iconWrapper__item" key={index} href={item.url}>
                             <div className="navBar__iconWrapper__item__icon">
                                 <img src={item.icon} alt="pic"></img>
                             </div>

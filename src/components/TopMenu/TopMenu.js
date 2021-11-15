@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./TopMenu.scss";
 import metamask from "../../assets/icon/metamask2.png";
+import whitepaper from "../../assets/doc/whitepaper.pdf";
 
 export const topMenu = ({ walletAddress, onConnectWalletHandler }) => {
   return (
@@ -14,7 +15,7 @@ export const topMenu = ({ walletAddress, onConnectWalletHandler }) => {
           <Link to="/inventory">INVENTORY</Link>
         </div>
         <div className="topMenu__menus__item">
-          <a href="https://destinywar.org/trial/DestinyWar.pdf" target="_blank">
+          <a href={whitepaper} target="_blank">
             WHITEPAPER
           </a>
         </div>
@@ -41,7 +42,7 @@ export const topMenu = ({ walletAddress, onConnectWalletHandler }) => {
         <div className="topMenu__dropDownMenu__content">
           <Link to="/">HOME</Link>
           <Link to="/inventory">INVENTORY</Link>
-          <a href="https://destinywar.org/trial/DestinyWar.pdf" target="_blank">
+          <a href={whitepaper} target="_blank">
             WHITEPAPER
           </a>
           <Link to="/wikipedia">GAME-WIKIPEDIA</Link>

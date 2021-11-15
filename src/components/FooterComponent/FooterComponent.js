@@ -4,10 +4,10 @@ export const FooterComponent = () => {
     return (
         <section className="footerComponent">
             <div className="footerComponent__icons">
-                <a href="#javascript;"><i className="fab fa-facebook"></i></a>
-                <a href="#javascript;"><i className="fab fa-discord"></i></a>
+                <a href="https://www.facebook.com/gaming/DestinyWarNFTGame"><i className="fab fa-facebook"></i></a>
+                <a href="https://discord.gg/v3SbRprrnP"><i className="fab fa-discord"></i></a>
                 <a href="#javascript;"><i className="fab fa-instagram"></i></a>
-                <a href="#javascript;"><i className="fab fa-twitter"></i></a>
+                <a href="https://t.me/destinywarnftgame"><i className="fab fa-telegram"></i></a>
 				<a href="#javascript;"><i className="fab fa-youtube"></i></a>
             </div>
 
