@@ -5,6 +5,7 @@ import icon2 from '../../assets/icon/discord.png';
 import icon3 from '../../assets/icon/instagram.png';
 import icon4 from '../../assets/icon/twitter.png';
 import icon5 from '../../assets/icon/youtube.png';
+import icon6 from '../../assets/icon/telegram.png';
 
 const info = [
     {
@@ -23,7 +24,7 @@ const info = [
         url: '#javascript'
     },
     {
-        icon: icon4,
+        icon: icon6,
         title: 'Telegram',
         url:'https://t.me/destinywarnftgame'
     }, 
