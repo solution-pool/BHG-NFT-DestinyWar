@@ -128,7 +128,7 @@ export const getOccupiedIds = async () => {
 }
 
 export const getIsWhiteList = async(walletAddress) => {
-  const contract = getContractWithoutSigner()
+  const contract = getContractWithoutSigner(3) // for pet;
   try {
       let result = await contract.isHolderList(walletAddress)
       return result

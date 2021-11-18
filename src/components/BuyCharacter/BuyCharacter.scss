@@ -200,6 +200,14 @@
             left: 50%;
             top: 50%;
           }
+
+          &__next {
+            width: 25%;
+            position: absolute;
+            transform: translate3d(-50%, -50%, 0);
+            left: 50%;
+            top: 50%;
+          }
         }
       }
     }

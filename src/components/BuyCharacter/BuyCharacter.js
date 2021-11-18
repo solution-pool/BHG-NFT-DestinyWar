@@ -17,6 +17,7 @@ import total_minted from '../../assets/img/buy/total/minted.png';
 import progressBack from '../../assets/img/buy/bar1.png';
 import progressBar from '../../assets/img/buy/bar2.png';
 import progressHead from '../../assets/img/buy/head.png';
+import nextPrice from '../../assets/img/next_price.png';
 
 export const BuyCharacter = ({
   mintLoading,
@@ -132,6 +133,9 @@ export const BuyCharacter = ({
 							</div>
 							<div className="buyCharacter__total__progress__bar__main__head" style={{ left: `${totalSupply/50000}%` }}>
 								<img alt="pic" src={progressHead}></img>
+							</div>
+							<div className="buyCharacter__total__progress__bar__main__next" style={{ left: "30%" }}>
+								<img alt="pic" src={nextPrice}></img>
 							</div>
 						</div>
 					</div>

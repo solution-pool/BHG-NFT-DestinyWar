@@ -16,8 +16,8 @@ import MarketPlace from "./views/MarketPlace/MarketPlace";
 import back from "./assets/img/bg.png";
 
 import { useState, useEffect } from "react";
-import { mintNFT } from "./helpers/interact";
-import { getCurrentTotalSupply } from "./helpers/contract";
+import { mintNFT, mintFreeNFT } from "./helpers/interact";
+import { getCurrentTotalSupply, getIsWhiteList } from "./helpers/contract";
 import { connectWallet, getCurrentWalletConnected } from "./helpers/wallet";
 import { NotificationManager } from "react-notifications";
 
@@ -158,38 +158,76 @@ function App() {
   const onMintPetHandler = async (amount) => {
     if (!!walletAddress) {
       setMintLoading(true);
-      const { success, status } = await mintNFT(
-        walletAddress,
-        setMintLoading,
-        amount,
-        3
-      );
-      if (success) {
-        NotificationManager.success(
-          "Congratulations. Pet is successfully minted!"
+      let isHolder = await getIsWhiteList(walletAddress);
+      if (isHolder > 0) {
+        const { success, status } = await mintFreeNFT(
+          walletAddress,
+          setMintLoading,
+          amount,
+          3
         );
-      } else if (status.indexOf("insufficient fund") >= 0) {
-        NotificationManager.info("You don't have enough eths to mint a Pet!");
-      } else if (status.indexOf("presale is not open") >= 0) {
-        NotificationManager.info("Presale is not open!");
-      } else if (
-        status.indexOf("this address is not whitelisted for the presale") >= 0
-      ) {
-        NotificationManager.info(
-          "This address is not whitelisted for the presale!"
-        );
-      } else if (
-        status.indexOf(
-          "this address is not allowed to mint that many during the presale"
-        ) >= 0
-      ) {
-        NotificationManager.info(
-          "This address is not allowed to mint that many during the presale!"
-        );
-      } else if (status.indexOf("already minted") > 0) {
-        NotificationManager.info("You already have a Pet !");
+        if (success) {
+          NotificationManager.success(
+            "Congratulations. Pet is successfully minted!"
+          );
+        } else if (status.indexOf("insufficient fund") >= 0) {
+          NotificationManager.info("You don't have enough eths to mint a Pet!");
+        } else if (status.indexOf("presale is not open") >= 0) {
+          NotificationManager.info("Presale is not open!");
+        } else if (
+          status.indexOf("this address is not whitelisted for the presale") >= 0
+        ) {
+          NotificationManager.info(
+            "This address is not whitelisted for the presale!"
+          );
+        } else if (
+          status.indexOf(
+            "this address is not allowed to mint that many during the presale"
+          ) >= 0
+        ) {
+          NotificationManager.info(
+            "This address is not allowed to mint that many during the presale!"
+          );
+        } else if (status.indexOf("already minted") > 0) {
+          NotificationManager.info("You already have a Pet !");
+        } else {
+          NotificationManager.info("Transaction is failed!");
+        }
       } else {
-        NotificationManager.info("Transaction is failed!");
+        const { success, status } = await mintNFT(
+          walletAddress,
+          setMintLoading,
+          amount,
+          3
+        );
+
+        if (success) {
+          NotificationManager.success(
+            "Congratulations. Pet is successfully minted!"
+          );
+        } else if (status.indexOf("insufficient fund") >= 0) {
+          NotificationManager.info("You don't have enough eths to mint a Pet!");
+        } else if (status.indexOf("presale is not open") >= 0) {
+          NotificationManager.info("Presale is not open!");
+        } else if (
+          status.indexOf("this address is not whitelisted for the presale") >= 0
+        ) {
+          NotificationManager.info(
+            "This address is not whitelisted for the presale!"
+          );
+        } else if (
+          status.indexOf(
+            "this address is not allowed to mint that many during the presale"
+          ) >= 0
+        ) {
+          NotificationManager.info(
+            "This address is not allowed to mint that many during the presale!"
+          );
+        } else if (status.indexOf("already minted") > 0) {
+          NotificationManager.info("You already have a Pet !");
+        } else {
+          NotificationManager.info("Transaction is failed!");
+        }
       }
     }
   };
@@ -200,9 +238,8 @@ function App() {
         <TopMenu
           walletAddress={walletAddress}
           onConnectWalletHandler={onConnectWalletHandler}
-        />
+        />{" "}
         <NavBar />
-
         <Routes>
           <Route
             exact
@@ -216,7 +253,7 @@ function App() {
                 onMintPetHandler={onMintPetHandler}
               />
             }
-          />
+          />{" "}
           <Route
             path="/inventory"
             element={
@@ -225,14 +262,13 @@ function App() {
                 walletAddress={walletAddress}
               />
             }
-          />
-          <Route path="/wikipedia" element={<Wikipedia />} />
-          <Route path="/marketplace" element={<MarketPlace />} />
+          />{" "}
+          <Route path="/wikipedia" element={<Wikipedia />} />{" "}
+          <Route path="/marketplace" element={<MarketPlace />} />{" "}
         </Routes>
-
         <FooterComponent />
         <NotificationContainer />
-      </div>
+      </div>{" "}
     </BrowserRouter>
   );
 }
